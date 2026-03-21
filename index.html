@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igor Carvalhosa - Agência Raiz | Vendas para Prestadores de Serviço</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar */
+        nav {
+            background: #0047AB;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 71, 171, 0.3);
+            transition: background 0.3s ease;
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: white;
+            letter-spacing: -0.3px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.2rem;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.88);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s, opacity 0.2s;
+            letter-spacing: 0.2px;
+        }
+
+        nav a:hover {
+            color: white;
+            opacity: 1;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #003a8c 0%, #0047AB 50%, #1565e8 100%);
+            color: white;
+            padding: 160px 2rem 110px;
+            text-align: center;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.04) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.25);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .hero h1 {
+            font-size: 3.6rem;
+            margin-bottom: 1.2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.15;
+        }
+
+        .hero h1 span {
+            color: #ffd700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.92;
+            font-weight: 400;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #0047AB;
+            padding: 15px 38px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .cta-button:hover {
+            background: #ffd700;
+            color: #0047AB;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button-outline {
+            display: inline-block;
+            background: transparent;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.5);
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .cta-button-outline:hover {
+            border-color: white;
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        .hero-trust {
+            margin-top: 2.5rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section Headers */
+        .section-title {
+            font-size: 2.4rem;
+            margin-bottom: 0.75rem;
+            text-align: center;
+            color: #0d1f6e;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.05rem;
+            max-width: 580px;
+            margin: 0 auto 3rem;
+            line-height: 1.7;
+        }
+
+        /* Solutions Section */
+        .solutions {
+            padding: 90px 2rem;
+            background: #fafbff;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+            gap: 2rem;
+        }
+
+        .solution-card {
+            background: white;
+            padding: 0;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0, 71, 171, 0.08);
+            transition: all 0.35s ease;
+            border: 1px solid #eef2ff;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        .solution-card.visible {
+            animation: slideInUp 0.6s ease-out forwards;
+        }
+
+        .solution-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 71, 171, 0.15);
+            border-color: #c5d8ff;
+        }
+
+        .solution-image {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .solution-card-body {
+            padding: 1.75rem;
+        }
+
+        .solution-card-tag {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #0047AB;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 0.8rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .solution-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.75rem;
+            color: #0d1f6e;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+
+        .solution-card p {
+            color: #666;
+            line-height: 1.75;
+            font-size: 0.95rem;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 90px 2rem;
+            background: linear-gradient(135deg, #003a8c 0%, #0047AB 60%, #1565e8 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .benefits::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .benefits .section-title {
+            color: white;
+        }
+
+        .benefits .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-item {
+            text-align: center;
+            opacity: 0;
+            padding: 2rem 1.5rem;
+            background: rgba(255,255,255,0.07);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.12);
+            backdrop-filter: blur(4px);
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .benefit-item:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-4px);
+        }
+
+        .benefit-item.visible {
+            animation: slideInUp 0.6s ease-out forwards;
+        }
+
+        .benefit-icon {
+            font-size: 2.8rem;
+            margin-bottom: 1.1rem;
+            display: block;
+        }
+
+        .benefit-item h3 {
+            margin-bottom: 0.6rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .benefit-item p {
+            opacity: 0.88;
+            line-height: 1.65;
+            font-size: 0.95rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 90px 2rem;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image-wrap {
+            position: relative;
+        }
+
+        .about-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 71, 171, 0.15);
+            opacity: 0;
+            animation: slideInLeft 0.8s ease-out forwards;
+            display: block;
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: -16px;
+            right: -16px;
+            background: #0047AB;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 8px 24px rgba(0,71,171,0.3);
+        }
+
+        .about-badge .badge-number {
+            font-size: 1.8rem;
+            font-weight: 800;
+            display: block;
+            line-height: 1;
+        }
+
+        .about-badge .badge-label {
+            font-size: 0.72rem;
+            opacity: 0.9;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .about-text {
+            opacity: 0;
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        .about-text .eyebrow {
+            color: #0047AB;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #0d1f6e;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .about-text .tagline {
+            color: #0047AB;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .about-text p {
+            margin-bottom: 1.4rem;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            background: #f4f7ff;
+            padding: 1.4rem 1rem;
+            border-radius: 14px;
+            text-align: center;
+            border: 1px solid #e0e9ff;
+            opacity: 0;
+            animation: zoomIn 0.6s ease-out forwards;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,71,171,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #0047AB;
+            line-height: 1;
+        }
+
+        .stat-label {
+            color: #666;
+            margin-top: 0.4rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 90px 2rem;
+            text-align: center;
+            background: #f4f7ff;
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.2rem;
+            color: #0d1f6e;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2.5rem;
+            max-width: 580px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.75;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .cta-section .cta-button {
+            background: #0047AB;
+            color: white;
+            font-size: 1.05rem;
+            padding: 17px 44px;
+        }
+
+        .cta-section .cta-button:hover {
+            background: #003a8c;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 35px rgba(0,71,171,0.35);
+        }
+
+        /* Footer */
+        footer {
+            background: #0d1f6e;
+            color: white;
+            text-align: center;
+            padding: 2.5rem 2rem;
+        }
+
+        footer p {
+            margin-bottom: 0.4rem;
+            opacity: 0.85;
+            font-size: 0.9rem;
+        }
+
+        footer p:last-child {
+            opacity: 0.55;
+            font-size: 0.82rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes zoomIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 1.2rem;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .about-badge {
+                position: static;
+                display: inline-block;
+                margin-top: 1rem;
+            }
+
+            .stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .section-title {
+                font-size: 1.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <div class="logo">🚀 Agência Raiz</div>
+            <ul>
+                <li><a href="#solucoes">Soluções</a></li>
+                <li><a href="#beneficios">Benefícios</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">✦ Especialistas em Prestadores de Serviço</div>
+            <h1>Venda Mais,<br><span>Trabalhe Menos</span></h1>
+            <p>Site profissional, anúncios no Google e atendimento automatizado 100% humanizado — os 3 pilares para crescer sem depender de indicação</p>
+            <div class="hero-actions">
+                <button class="cta-button" onclick="scrollToSection('contato')">Quero Mais Clientes Agora</button>
+                <button class="cta-button-outline" onclick="scrollToSection('solucoes')">Ver Como Funciona</button>
+            </div>
+            <p class="hero-trust">🔒 Sem contrato de fidelidade &nbsp;·&nbsp; Resultado ou seu dinheiro de volta</p>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solutions" id="solucoes">
+        <div class="container">
+            <h2 class="section-title">Os 3 Pilares da Nossa Solução</h2>
+            <p class="section-subtitle">Cada pilar resolve um problema real que impede seu negócio de crescer — juntos, eles transformam como você atrai e atende clientes.</p>
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <img src="images/landing_page.svg" alt="Landing Page Profissional" class="solution-image">
+                    <div class="solution-card-body">
+                        <span class="solution-card-tag">Pilar 1</span>
+                        <h3>Landing Page Profissional</h3>
+                        <p>Um site moderno e otimizado que posiciona seu negócio com credibilidade, conquista a confiança do cliente no primeiro segundo e transforma visitas em contatos.</p>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <img src="images/google_ads.svg" alt="Google Ads Estratégico" class="solution-image">
+                    <div class="solution-card-body">
+                        <span class="solution-card-tag">Pilar 2</span>
+                        <h3>Google Ads Estratégico</h3>
+                        <p>Anúncios nas palavras-chave certas, aparecendo exatamente quando alguém está procurando o seu serviço — pessoas altamente qualificadas e prontas para contratar.</p>
+                    </div>
+                </div>
+                <div class="solution-card">
+                    <img src="images/ia_humanizada.svg" alt="IA Humanizada 24/7" class="solution-image">
+                    <div class="solution-card-body">
+                        <span class="solution-card-tag">Pilar 3</span>
+                        <h3>IA Humanizada 24/7</h3>
+                        <p>Atendimento inteligente treinado com seu conhecimento e jeito de falar. O cliente conversa e não percebe que é automático — em muitos casos parece você mesmo respondendo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="beneficios">
+        <div class="container">
+            <h2 class="section-title">Por que escolher a Agência Raiz?</h2>
+            <p class="section-subtitle">Focamos em resolver o que realmente trava o crescimento de quem presta serviço.</p>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <span class="benefit-icon">✨</span>
+                    <h3>Mais Clientes</h3>
+                    <p>Atraia clientes qualificados toda semana sem depender de indicação ou panfleto</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">⏱️</span>
+                    <h3>Menos Tempo no Zap</h3>
+                    <p>Automatize o atendimento e recupere horas do seu dia para o que importa</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">💼</span>
+                    <h3>Imagem Profissional</h3>
+                    <p>Posicione-se como referência no seu mercado e justifique preços mais altos</p>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">🎯</span>
+                    <h3>Foco na Entrega</h3>
+                    <p>Dedique-se ao que você faz melhor: entregar um serviço de excelência</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-image-wrap">
+                    <img src="images/about_image.svg" alt="Igor Carvalhosa" class="about-image">
+                    <div class="about-badge">
+                        <span class="badge-number">6+</span>
+                        <span class="badge-label">Anos de<br>Experiência</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="eyebrow">Especialista em Vendas Digitais</p>
+                    <h3>Igor Carvalhosa</h3>
+                    <span class="tagline">Agência Raiz · Marketing &amp; Vendas para Prestadores de Serviço</span>
+                    <p>Com mais de 6 anos no mercado de marketing e vendas, me especializei em ajudar prestadores de serviço a crescerem sem precisar trabalhar mais — e sem depender de indicação para isso.</p>
+                    <p>A Agência Raiz nasceu de uma constatação simples: <strong>você não precisa trabalhar mais para vender mais</strong>. Com a estratégia certa de posicionamento, tráfego e atendimento, o negócio cresce enquanto você foca na qualidade da sua entrega.</p>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-number">6+</div>
+                            <div class="stat-label">Anos de Experiência</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Clientes Atendidos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Humanizado</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">∞</div>
+                            <div class="stat-label">Dedicação</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contato">
+        <div class="container">
+            <h2>Pronto para Transformar seu Negócio?</h2>
+            <p>Chega de depender de indicação e de passar horas no WhatsApp. Deixe a Agência Raiz cuidar da sua captação enquanto você se concentra no que importa: a qualidade do seu serviço.</p>
+            <button class="cta-button" onclick="handleContact()">Fale Conosco Agora via WhatsApp</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Agência Raiz — Igor Carvalhosa</p>
+        <p>Transformando prestadores de serviço em empresas de sucesso</p>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function handleContact() {
+            const phone = '5521920194389';
+            const message = 'Olá! Gostaria de saber mais sobre os serviços da Agência Raiz.';
+            const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.solution-card').forEach(card => observer.observe(card));
+        document.querySelectorAll('.benefit-item').forEach(item => observer.observe(item));
+        document.querySelectorAll('.stat-item').forEach(item => observer.observe(item));
+
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(0, 55, 135, 0.97)';
+                nav.style.backdropFilter = 'blur(8px)';
+            } else {
+                nav.style.background = '#0047AB';
+                nav.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

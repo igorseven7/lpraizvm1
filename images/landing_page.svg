@@ -1,0 +1,93 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" width="600" height="400">
+  <defs>
+    <linearGradient id="bgLP" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f0fe"/>
+      <stop offset="100%" style="stop-color:#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="heroLP" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0047AB"/>
+      <stop offset="100%" style="stop-color:#1d6ef5"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="rgba(0,71,171,0.2)"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgLP)"/>
+
+  <!-- Laptop body -->
+  <rect x="55" y="30" width="490" height="305" rx="14" fill="#1c1c2e" filter="url(#shadow)"/>
+  <rect x="65" y="40" width="470" height="285" rx="8" fill="#0d1117"/>
+
+  <!-- Browser chrome -->
+  <rect x="65" y="40" width="470" height="36" rx="8" fill="#f1f3f4"/>
+  <rect x="65" y="60" width="470" height="16" fill="#f1f3f4"/>
+
+  <!-- Traffic lights -->
+  <circle cx="86" cy="58" r="6" fill="#ff5f57"/>
+  <circle cx="106" cy="58" r="6" fill="#febc2e"/>
+  <circle cx="126" cy="58" r="6" fill="#28c840"/>
+
+  <!-- URL bar -->
+  <rect x="148" y="49" width="320" height="18" rx="9" fill="white" stroke="#e0e0e0" stroke-width="1"/>
+  <text x="308" y="62" text-anchor="middle" fill="#555" font-size="9" font-family="Arial, sans-serif">🔒  seunegocio.com.br</text>
+
+  <!-- Reload + menu icons -->
+  <text x="480" y="62" fill="#888" font-size="12" font-family="Arial">⋮</text>
+
+  <!-- === WEBSITE CONTENT === -->
+
+  <!-- Nav bar of the inner site -->
+  <rect x="65" y="76" width="470" height="28" fill="#0047AB"/>
+  <text x="90" y="95" fill="white" font-size="10" font-weight="bold" font-family="Arial">🚀 SeuNegócio</text>
+  <text x="340" y="95" fill="rgba(255,255,255,0.85)" font-size="8" font-family="Arial">Serviços</text>
+  <text x="390" y="95" fill="rgba(255,255,255,0.85)" font-size="8" font-family="Arial">Sobre</text>
+  <text x="432" y="95" fill="rgba(255,255,255,0.85)" font-size="8" font-family="Arial">Contato</text>
+
+  <!-- Hero section -->
+  <rect x="65" y="104" width="470" height="105" fill="url(#heroLP)"/>
+
+  <!-- Hero text -->
+  <text x="300" y="135" text-anchor="middle" fill="white" font-size="17" font-weight="bold" font-family="Arial, sans-serif">Seu Negócio no Próximo Nível</text>
+  <text x="300" y="155" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="10" font-family="Arial, sans-serif">Atraia mais clientes com presença digital profissional</text>
+  <text x="300" y="169" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Arial, sans-serif">Site + Google Ads + Atendimento Automatizado</text>
+
+  <!-- Hero CTA button -->
+  <rect x="243" y="177" width="114" height="22" rx="11" fill="white"/>
+  <text x="300" y="192" text-anchor="middle" fill="#0047AB" font-size="9" font-weight="bold" font-family="Arial, sans-serif">Fale Conosco Agora</text>
+
+  <!-- Services Section -->
+  <rect x="65" y="209" width="470" height="110" fill="white"/>
+  <text x="300" y="228" text-anchor="middle" fill="#222" font-size="11" font-weight="bold" font-family="Arial, sans-serif">Nossos Serviços</text>
+
+  <!-- Service card 1 -->
+  <rect x="80" y="234" width="135" height="72" rx="8" fill="#f4f7ff" stroke="#dce8ff" stroke-width="1.5"/>
+  <text x="147" y="258" text-anchor="middle" font-size="20" font-family="Arial">🏠</text>
+  <text x="147" y="274" text-anchor="middle" fill="#0047AB" font-size="9" font-weight="bold" font-family="Arial">Reformas &amp; Obras</text>
+  <text x="147" y="287" text-anchor="middle" fill="#888" font-size="7.5" font-family="Arial">Profissionais qualificados</text>
+  <text x="147" y="298" text-anchor="middle" fill="#1d6ef5" font-size="7" font-family="Arial">Ver mais →</text>
+
+  <!-- Service card 2 -->
+  <rect x="233" y="234" width="135" height="72" rx="8" fill="#f4f7ff" stroke="#dce8ff" stroke-width="1.5"/>
+  <text x="300" y="258" text-anchor="middle" font-size="20" font-family="Arial">⭐</text>
+  <text x="300" y="274" text-anchor="middle" fill="#0047AB" font-size="9" font-weight="bold" font-family="Arial">Qualidade Garantida</text>
+  <text x="300" y="287" text-anchor="middle" fill="#888" font-size="7.5" font-family="Arial">Avaliação 5 estrelas</text>
+  <text x="300" y="298" text-anchor="middle" fill="#1d6ef5" font-size="7" font-family="Arial">Ver mais →</text>
+
+  <!-- Service card 3 -->
+  <rect x="386" y="234" width="135" height="72" rx="8" fill="#f4f7ff" stroke="#dce8ff" stroke-width="1.5"/>
+  <text x="453" y="258" text-anchor="middle" font-size="20" font-family="Arial">📞</text>
+  <text x="453" y="274" text-anchor="middle" fill="#0047AB" font-size="9" font-weight="bold" font-family="Arial">Atendimento 24h</text>
+  <text x="453" y="287" text-anchor="middle" fill="#888" font-size="7.5" font-family="Arial">Sempre disponível</text>
+  <text x="453" y="298" text-anchor="middle" fill="#1d6ef5" font-size="7" font-family="Arial">Ver mais →</text>
+
+  <!-- Testimonial strip -->
+  <rect x="65" y="319" width="470" height="26" fill="#f8f9fa"/>
+  <text x="300" y="335" text-anchor="middle" fill="#666" font-size="8.5" font-family="Arial, sans-serif">⭐⭐⭐⭐⭐  "Triplicamos os chamados em 2 meses!"  ⭐⭐⭐⭐⭐  "Melhor investimento do meu negócio"</text>
+
+  <!-- Laptop bottom -->
+  <rect x="40" y="335" width="520" height="18" rx="4" fill="#111122"/>
+  <rect x="195" y="335" width="210" height="8" rx="2" fill="#0d0d1a"/>
+  <ellipse cx="300" cy="358" rx="250" ry="8" fill="rgba(0,0,0,0.15)"/>
+</svg>

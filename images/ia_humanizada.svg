@@ -1,0 +1,133 @@
+<svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" width="600" height="400">
+  <defs>
+    <linearGradient id="bgIA" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0fdf4"/>
+      <stop offset="100%" style="stop-color:#dcfce7"/>
+    </linearGradient>
+    <linearGradient id="phoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1c1c2e"/>
+      <stop offset="100%" style="stop-color:#111122"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#075e54"/>
+      <stop offset="100%" style="stop-color:#128c7e"/>
+    </linearGradient>
+    <filter id="phoneShadow">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="rgba(0,0,0,0.25)"/>
+    </filter>
+    <clipPath id="phoneClip">
+      <rect x="165" y="20" width="270" height="360" rx="28"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="400" fill="url(#bgIA)"/>
+
+  <!-- Background decorations -->
+  <circle cx="80" cy="80" r="60" fill="rgba(0,200,100,0.06)"/>
+  <circle cx="520" cy="320" r="80" fill="rgba(0,71,171,0.06)"/>
+  <circle cx="500" cy="60" r="40" fill="rgba(0,200,100,0.05)"/>
+
+  <!-- Left label -->
+  <rect x="20" y="150" width="130" height="90" rx="12" fill="white" stroke="#e0f2e9" stroke-width="1.5"/>
+  <text x="85" y="175" text-anchor="middle" fill="#075e54" font-size="22" font-family="Arial">🤖</text>
+  <text x="85" y="195" text-anchor="middle" fill="#111" font-size="9.5" font-weight="bold" font-family="Arial, sans-serif">IA Humanizada</text>
+  <text x="85" y="210" text-anchor="middle" fill="#555" font-size="8.5" font-family="Arial, sans-serif">Treinada com seu</text>
+  <text x="85" y="223" text-anchor="middle" fill="#555" font-size="8.5" font-family="Arial, sans-serif">jeito de atender</text>
+
+  <!-- Right label -->
+  <rect x="450" y="90" width="130" height="78" rx="12" fill="white" stroke="#e0f2e9" stroke-width="1.5"/>
+  <text x="515" y="115" text-anchor="middle" fill="#0047AB" font-size="22" font-family="Arial">⚡</text>
+  <text x="515" y="133" text-anchor="middle" fill="#111" font-size="9.5" font-weight="bold" font-family="Arial, sans-serif">Resposta</text>
+  <text x="515" y="147" text-anchor="middle" fill="#111" font-size="9.5" font-weight="bold" font-family="Arial, sans-serif">Instantânea</text>
+  <text x="515" y="161" text-anchor="middle" fill="#555" font-size="8" font-family="Arial, sans-serif">24h / 7 dias</text>
+
+  <rect x="450" y="230" width="130" height="78" rx="12" fill="white" stroke="#e0f2e9" stroke-width="1.5"/>
+  <text x="515" y="255" text-anchor="middle" fill="#34A853" font-size="22" font-family="Arial">💬</text>
+  <text x="515" y="274" text-anchor="middle" fill="#111" font-size="9.5" font-weight="bold" font-family="Arial, sans-serif">Parece você</text>
+  <text x="515" y="289" text-anchor="middle" fill="#555" font-size="8.5" font-family="Arial, sans-serif">atendendo de</text>
+  <text x="515" y="300" text-anchor="middle" fill="#555" font-size="8.5" font-family="Arial, sans-serif">verdade</text>
+
+  <!-- Phone body -->
+  <rect x="165" y="20" width="270" height="360" rx="28" fill="url(#phoneGrad)" filter="url(#phoneShadow)"/>
+
+  <!-- Phone screen -->
+  <rect x="172" y="30" width="256" height="340" rx="22" fill="#e5ddd5"/>
+
+  <!-- WhatsApp header -->
+  <rect x="172" y="30" width="256" height="52" rx="0" fill="url(#headerGrad)"/>
+  <rect x="172" y="30" width="256" height="22" rx="22" fill="url(#headerGrad)"/>
+
+  <!-- Back arrow -->
+  <text x="182" y="52" fill="white" font-size="14" font-family="Arial">←</text>
+
+  <!-- Contact avatar -->
+  <circle cx="206" cy="56" r="14" fill="#25D366"/>
+  <text x="206" y="61" text-anchor="middle" fill="white" font-size="12" font-weight="bold" font-family="Arial">E</text>
+
+  <!-- Contact name & status -->
+  <text x="224" y="50" fill="white" font-size="10" font-weight="bold" font-family="Arial, sans-serif">Encanador Pro</text>
+  <circle cx="224" cy="62" r="3" fill="#25D366"/>
+  <text x="230" y="65" fill="rgba(255,255,255,0.85)" font-size="8" font-family="Arial, sans-serif">Online agora</text>
+
+  <!-- Phone icons top right -->
+  <text x="388" y="54" fill="white" font-size="13" font-family="Arial">📹</text>
+  <text x="406" y="54" fill="white" font-size="13" font-family="Arial">📞</text>
+
+  <!-- Chat background area -->
+  <rect x="172" y="82" width="256" height="260" fill="#e5ddd5"/>
+
+  <!-- Date divider -->
+  <rect x="257" y="88" width="90" height="16" rx="8" fill="rgba(0,0,0,0.15)"/>
+  <text x="302" y="100" text-anchor="middle" fill="white" font-size="7.5" font-family="Arial, sans-serif">Hoje · 14:32</text>
+
+  <!-- Message 1 - CLIENT (right) -->
+  <rect x="268" y="112" width="152" height="34" rx="8" fill="#dcf8c6"/>
+  <path d="M 420 120 L 428 116 L 420 112" fill="#dcf8c6"/>
+  <text x="280" y="128" fill="#111" font-size="8.5" font-family="Arial, sans-serif">Oi! Tenho um vazamento</text>
+  <text x="280" y="140" fill="#111" font-size="8.5" font-family="Arial, sans-serif">urgente no banheiro 😰</text>
+  <text x="408" y="142" fill="#888" font-size="7" font-family="Arial, sans-serif">✓✓</text>
+
+  <!-- Message 2 - IA (left) -->
+  <rect x="180" y="155" width="172" height="46" rx="8" fill="white"/>
+  <path d="M 180 163 L 172 159 L 180 155" fill="white"/>
+  <text x="192" y="170" fill="#111" font-size="8.5" font-family="Arial, sans-serif">Olá! Pode ficar tranquilo 😊</text>
+  <text x="192" y="182" fill="#111" font-size="8.5" font-family="Arial, sans-serif">Atendemos emergências em</text>
+  <text x="192" y="194" fill="#111" font-size="8.5" font-family="Arial, sans-serif">até 30 min! Qual seu endereço?</text>
+
+  <!-- Message 3 - CLIENT (right) -->
+  <rect x="280" y="210" width="140" height="24" rx="8" fill="#dcf8c6"/>
+  <path d="M 420 218 L 428 214 L 420 210" fill="#dcf8c6"/>
+  <text x="292" y="225" fill="#111" font-size="8.5" font-family="Arial, sans-serif">Rua das Flores, 142 - BL</text>
+  <text x="408" y="230" fill="#888" font-size="7" font-family="Arial, sans-serif">✓✓</text>
+
+  <!-- Message 4 - IA (left) with pricing -->
+  <rect x="180" y="243" width="182" height="58" rx="8" fill="white"/>
+  <path d="M 180 251 L 172 247 L 180 243" fill="white"/>
+  <text x="192" y="258" fill="#111" font-size="8.5" font-family="Arial, sans-serif">Ótimo! Conheço bem a região.</text>
+  <text x="192" y="270" fill="#111" font-size="8.5" font-family="Arial, sans-serif">🔧 Orçamento: R$ 120–180</text>
+  <text x="192" y="282" fill="#111" font-size="8.5" font-family="Arial, sans-serif">Técnico disponível agora!</text>
+  <text x="192" y="294" fill="#1a73e8" font-size="8.5" font-weight="bold" font-family="Arial, sans-serif">Confirmar atendimento? ✅</text>
+
+  <!-- Typing indicator -->
+  <rect x="180" y="310" width="60" height="20" rx="10" fill="white"/>
+  <circle cx="195" cy="320" r="3" fill="#999"/>
+  <circle cx="206" cy="320" r="3" fill="#999"/>
+  <circle cx="217" cy="320" r="3" fill="#999"/>
+
+  <!-- Message input area -->
+  <rect x="172" y="335" width="256" height="35" rx="0" fill="#f0f0f0"/>
+  <rect x="172" y="335" width="256" height="35" rx="0" fill="#f0f0f0"/>
+  <rect x="172" y="352" width="256" height="18" rx="0" fill="#f0f0f0"/>
+  <rect x="180" y="340" width="190" height="22" rx="11" fill="white"/>
+  <text x="199" y="355" fill="#aaa" font-size="8.5" font-family="Arial, sans-serif">Mensagem</text>
+  <circle cx="390" cy="351" r="12" fill="#25D366"/>
+  <text x="390" y="356" text-anchor="middle" fill="white" font-size="12" font-family="Arial">🎤</text>
+
+  <!-- Bottom home button -->
+  <rect x="172" y="357" width="256" height="13" rx="0" fill="#f0f0f0"/>
+  <rect x="270" y="362" width="60" height="4" rx="2" fill="#bbb"/>
+
+  <!-- Phone notch -->
+  <rect x="275" y="25" width="50" height="8" rx="4" fill="#0d1117"/>
+</svg>
