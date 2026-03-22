@@ -1,0 +1,218 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Base gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#061030"/>
+      <stop offset="45%" stop-color="#003a8c"/>
+      <stop offset="100%" stop-color="#0d2f7a"/>
+    </linearGradient>
+
+    <!-- Radial glows -->
+    <radialGradient id="glow1" cx="75%" cy="35%" r="40%">
+      <stop offset="0%"  stop-color="#1565e8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0047AB" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="15%" cy="60%" r="35%">
+      <stop offset="0%"  stop-color="#0047AB" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#003a8c" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="55%" cy="20%" r="25%">
+      <stop offset="0%"  stop-color="#4d94ff" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0047AB" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Bokeh blur filter -->
+    <filter id="blur-soft">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="blur-med">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <filter id="blur-lg">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+
+    <!-- Subtle grid pattern -->
+    <pattern id="grid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Dot pattern -->
+    <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="rgba(255,255,255,0.06)"/>
+    </pattern>
+  </defs>
+
+  <!-- Base fill -->
+  <rect width="1440" height="600" fill="url(#bg)"/>
+
+  <!-- Glow overlays -->
+  <rect width="1440" height="600" fill="url(#glow1)"/>
+  <rect width="1440" height="600" fill="url(#glow2)"/>
+  <rect width="1440" height="600" fill="url(#glow3)"/>
+
+  <!-- Grid overlay -->
+  <rect width="1440" height="600" fill="url(#grid)"/>
+
+  <!-- Dot overlay (right half) -->
+  <rect x="720" width="720" height="600" fill="url(#dots)" opacity="0.6"/>
+
+  <!-- ===== CITY SILHOUETTE ===== -->
+  <g opacity="0.18" fill="#1a3f8f">
+    <!-- Buildings far background -->
+    <rect x="0"    y="480" width="60"  height="120"/>
+    <rect x="55"   y="440" width="80"  height="160"/>
+    <rect x="130"  y="460" width="50"  height="140"/>
+    <rect x="175"  y="420" width="70"  height="180"/>
+    <rect x="240"  y="450" width="55"  height="150"/>
+    <rect x="290"  y="400" width="90"  height="200"/>
+    <rect x="375"  y="430" width="60"  height="170"/>
+    <rect x="430"  y="460" width="40"  height="140"/>
+    <rect x="465"  y="410" width="75"  height="190"/>
+    <rect x="535"  y="445" width="55"  height="155"/>
+    <rect x="585"  y="390" width="100" height="210"/>
+    <rect x="680"  y="420" width="65"  height="180"/>
+    <rect x="740"  y="455" width="50"  height="145"/>
+    <rect x="785"  y="405" width="80"  height="195"/>
+    <rect x="860"  y="435" width="60"  height="165"/>
+    <rect x="915"  y="415" width="95"  height="185"/>
+    <rect x="1005" y="450" width="55"  height="150"/>
+    <rect x="1055" y="400" width="85"  height="200"/>
+    <rect x="1135" y="440" width="60"  height="160"/>
+    <rect x="1190" y="420" width="70"  height="180"/>
+    <rect x="1255" y="460" width="50"  height="140"/>
+    <rect x="1300" y="390" width="90"  height="210"/>
+    <rect x="1385" y="430" width="55"  height="170"/>
+
+    <!-- Building windows (lighter) -->
+    <g fill="rgba(255,255,255,0.3)">
+      <rect x="62"  y="450" width="6" height="6"/>
+      <rect x="72"  y="450" width="6" height="6"/>
+      <rect x="62"  y="462" width="6" height="6"/>
+      <rect x="72"  y="462" width="6" height="6"/>
+      <rect x="62"  y="474" width="6" height="6"/>
+
+      <rect x="185" y="430" width="6" height="6"/>
+      <rect x="195" y="430" width="6" height="6"/>
+      <rect x="205" y="430" width="6" height="6"/>
+      <rect x="185" y="442" width="6" height="6"/>
+      <rect x="205" y="442" width="6" height="6"/>
+      <rect x="185" y="454" width="6" height="6"/>
+      <rect x="195" y="454" width="6" height="6"/>
+
+      <rect x="298" y="410" width="7" height="7"/>
+      <rect x="309" y="410" width="7" height="7"/>
+      <rect x="320" y="410" width="7" height="7"/>
+      <rect x="298" y="423" width="7" height="7"/>
+      <rect x="320" y="423" width="7" height="7"/>
+      <rect x="309" y="436" width="7" height="7"/>
+
+      <rect x="596" y="400" width="7" height="7"/>
+      <rect x="607" y="400" width="7" height="7"/>
+      <rect x="618" y="400" width="7" height="7"/>
+      <rect x="629" y="400" width="7" height="7"/>
+      <rect x="596" y="413" width="7" height="7"/>
+      <rect x="618" y="413" width="7" height="7"/>
+      <rect x="607" y="426" width="7" height="7"/>
+      <rect x="629" y="426" width="7" height="7"/>
+
+      <rect x="793" y="415" width="7" height="7"/>
+      <rect x="804" y="415" width="7" height="7"/>
+      <rect x="815" y="415" width="7" height="7"/>
+      <rect x="793" y="428" width="7" height="7"/>
+      <rect x="815" y="428" width="7" height="7"/>
+      <rect x="804" y="441" width="7" height="7"/>
+    </g>
+  </g>
+
+  <!-- ===== BOKEH LIGHTS (large, blurred) ===== -->
+  <g filter="url(#blur-lg)">
+    <circle cx="1100" cy="180" r="70"  fill="#4d94ff" opacity="0.22"/>
+    <circle cx="200"  cy="350" r="55"  fill="#1565e8" opacity="0.18"/>
+    <circle cx="950"  cy="420" r="45"  fill="#0066ff" opacity="0.16"/>
+    <circle cx="350"  cy="150" r="50"  fill="#3d7de8" opacity="0.14"/>
+    <circle cx="1300" cy="320" r="60"  fill="#1a4db5" opacity="0.2"/>
+  </g>
+
+  <!-- ===== BOKEH LIGHTS (medium) ===== -->
+  <g filter="url(#blur-med)">
+    <circle cx="820"  cy="130" r="25"  fill="#6ab0ff" opacity="0.35"/>
+    <circle cx="1220" cy="240" r="20"  fill="#4d94ff" opacity="0.3"/>
+    <circle cx="440"  cy="280" r="18"  fill="#80c0ff" opacity="0.28"/>
+    <circle cx="1050" cy="360" r="22"  fill="#5599ff" opacity="0.25"/>
+    <circle cx="130"  cy="200" r="16"  fill="#4488ee" opacity="0.3"/>
+    <circle cx="690"  cy="390" r="20"  fill="#3377dd" opacity="0.22"/>
+    <circle cx="1380" cy="180" r="18"  fill="#5599ff" opacity="0.28"/>
+    <circle cx="580"  cy="100" r="14"  fill="#77aaff" opacity="0.32"/>
+  </g>
+
+  <!-- ===== BOKEH LIGHTS (small, sharp-ish) ===== -->
+  <g filter="url(#blur-soft)">
+    <circle cx="760"  cy="200" r="8"  fill="#ffffff" opacity="0.45"/>
+    <circle cx="1160" cy="150" r="6"  fill="#ffffff" opacity="0.4"/>
+    <circle cx="980"  cy="290" r="7"  fill="#aaccff" opacity="0.5"/>
+    <circle cx="320"  cy="310" r="5"  fill="#ffffff" opacity="0.38"/>
+    <circle cx="500"  cy="180" r="6"  fill="#cce0ff" opacity="0.42"/>
+    <circle cx="1280" cy="370" r="8"  fill="#ffffff" opacity="0.36"/>
+    <circle cx="80"   cy="280" r="5"  fill="#aabbff" opacity="0.4"/>
+    <circle cx="640"  cy="450" r="6"  fill="#ffffff" opacity="0.3"/>
+    <circle cx="1420" cy="260" r="5"  fill="#ccd9ff" opacity="0.38"/>
+    <circle cx="870"  cy="80"  r="4"  fill="#ffffff" opacity="0.5"/>
+    <circle cx="1100" cy="470" r="7"  fill="#aaccff" opacity="0.28"/>
+    <circle cx="200"  cy="130" r="5"  fill="#ffffff" opacity="0.42"/>
+    <circle cx="1350" cy="90"  r="4"  fill="#ddeeff" opacity="0.45"/>
+    <circle cx="410"  cy="490" r="6"  fill="#aabbff" opacity="0.25"/>
+  </g>
+
+  <!-- ===== ABSTRACT GEOMETRIC LINES ===== -->
+  <g stroke="rgba(100,160,255,0.12)" stroke-width="1" fill="none">
+    <!-- Diagonal accent lines -->
+    <line x1="800" y1="0"   x2="1440" y2="400"/>
+    <line x1="850" y1="0"   x2="1440" y2="350"/>
+    <line x1="900" y1="0"   x2="1440" y2="300"/>
+    <line x1="0"   y1="200" x2="400"  y2="600"/>
+    <line x1="0"   y1="150" x2="350"  y2="600"/>
+  </g>
+
+  <!-- ===== SIGNAL / CONNECTIVITY ARCS ===== -->
+  <g fill="none" stroke="rgba(77,148,255,0.1)" stroke-width="1.5">
+    <path d="M 1100 300 Q 1200 100 1400 200" stroke-dasharray="4 6"/>
+    <path d="M 1050 320 Q 1180 80  1440 150" stroke-dasharray="3 8"/>
+    <path d="M 200 250  Q 350 50   550 180"  stroke-dasharray="4 6"/>
+  </g>
+
+  <!-- ===== SMARTPHONE DEVICE SILHOUETTE (right side) ===== -->
+  <g transform="translate(1060, 90)" opacity="0.12">
+    <rect x="0" y="0" width="120" height="220" rx="16" ry="16" fill="none" stroke="#6699ff" stroke-width="2.5"/>
+    <rect x="10" y="15" width="100" height="170" rx="4" fill="rgba(100,160,255,0.15)"/>
+    <circle cx="60" cy="205" r="6" fill="none" stroke="#6699ff" stroke-width="2"/>
+    <!-- Screen content lines -->
+    <rect x="18" y="25" width="84" height="6" rx="3" fill="rgba(255,255,255,0.25)"/>
+    <rect x="18" y="37" width="60" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="18" y="55" width="84" height="40" rx="4" fill="rgba(100,160,255,0.2)"/>
+    <rect x="18" y="103" width="40" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+    <rect x="18" y="113" width="84" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+    <rect x="18" y="123" width="70" height="4" rx="2" fill="rgba(255,255,255,0.1)"/>
+    <rect x="18" y="140" width="84" height="28" rx="4" fill="rgba(0,71,171,0.4)"/>
+  </g>
+
+  <!-- ===== UPWARD TREND CHART (subtle, right area) ===== -->
+  <g transform="translate(1220, 280)" opacity="0.1" stroke="#88bbff" stroke-width="2" fill="none">
+    <polyline points="0,80 30,60 60,70 90,35 120,45 150,15 180,25"/>
+    <circle cx="180" cy="25" r="4" fill="#88bbff"/>
+  </g>
+
+  <!-- ===== BOTTOM FADE to blend with page ===== -->
+  <linearGradient id="fade-bottom" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="60%" stop-color="transparent"/>
+    <stop offset="100%" stop-color="#003a8c" stop-opacity="0.6"/>
+  </linearGradient>
+  <rect width="1440" height="600" fill="url(#fade-bottom)"/>
+
+  <!-- ===== TOP-LEFT vignette ===== -->
+  <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+    <stop offset="0%" stop-color="transparent"/>
+    <stop offset="100%" stop-color="#020b1e" stop-opacity="0.5"/>
+  </radialGradient>
+  <rect width="1440" height="600" fill="url(#vignette)"/>
+</svg>
